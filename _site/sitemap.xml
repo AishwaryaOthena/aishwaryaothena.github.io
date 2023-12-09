@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://0.0.0.0:8080/blog/2022/displaying-external-posts-on-your-al-folio-blog/</loc>
-<lastmod>2022-04-23T23:20:09+00:00</lastmod>
-</url>
-<url>
-<loc>http://0.0.0.0:8080/quarto-workflows/browser/</loc>
-</url>
-<url>
-<loc>http://0.0.0.0:8080/quarto-workflows/jupyter/</loc>
-</url>
-<url>
-<loc>http://0.0.0.0:8080/blog/2022/</loc>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://aishwaryaothena.github.io/transition-from-rmarkdown.html</loc>
+    <lastmod>2023-12-09T03:05:38.674Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aishwaryaothena.github.io/index.html</loc>
+    <lastmod>2023-12-09T03:05:39.067Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aishwaryaothena.github.io/learning-more.html</loc>
+    <lastmod>2023-12-09T03:05:39.357Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aishwaryaothena.github.io/explore.html</loc>
+    <lastmod>2023-12-09T03:05:39.884Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aishwaryaothena.github.io/quarto-workflows/browser.html</loc>
+    <lastmod>2023-12-09T03:05:40.227Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aishwaryaothena.github.io/quarto-workflows/jupyter.html</loc>
+    <lastmod>2023-12-09T03:05:40.754Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aishwaryaothena.github.io/quarto-workflows/index.html</loc>
+    <lastmod>2023-12-09T03:05:41.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aishwaryaothena.github.io/quarto-workflows/rstudio.html</loc>
+    <lastmod>2023-12-09T03:05:41.591Z</lastmod>
+  </url>
 </urlset>
