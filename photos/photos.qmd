@@ -1,54 +1,35 @@
----
-title: "Photos"
+title: "Art Gallery"
 title-block-banner: true
 page-layout: full
-freeze: true
+freeze: false
 filters:
    - lightbox
 lightbox: auto
 echo: false
 ---
 
-```{r}
-prepare_photos <- function(source_path, dest_path, geometry = "1600"){
-  for(f in list.files(source_path, full.names = TRUE)){
-    magick::image_read(path = f) |>
-      magick::image_resize(geometry = geometry) |>
-      magick::image_write(path = paste0("images/", basename(f)))
-  }
-}
+## Tactile Art Gallery
 
-descrip_exif <- function(x){
-  exif <- exifr::read_exif(
-    path = x, 
-    tags = c("Make" ,"Model", "FocalLength", "FNumber", "ExposureTime", 
-             "ISO", "LensModel", "AmbientTemperature", "BatteryTemperature", 
-             "BatteryLevel", "SelfTimer", "DateTimeOriginal", "OffsetTime")
-  )
-  
-  glue::glue("{exif$Make} {exif$Model} Lens {exif$LensModel} <br>
-             {exif$FocalLength}mm f/{exif$FNumber} 1/{round(1/exif$ExposureTime)} ISO {exif$ISO} <br>
-             {lubridate::as_datetime(glue::glue('{exif$DateTimeOriginal} {exif$OffsetTime}'))} UTC {exif$AmbientTemperature}°C")
-}
-```
+::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); grid-gap: 1em;"}
+![Image 1](images/1.jpg){description="Caption for Image 1"}
 
-```{r}
-#| eval: false
-prepare_photos(
-  source_path = "/Users/oaishwarya/Library/Mobile Documents/com~apple~CloudDocs/art"
-  dest_path = "images/"
-)
-```
+![Image 2](images/2.jpg){description="Caption for Image 2"}
 
-## Tactile Art
+![Image 3](images/3.jpg){description="Caption for Image 3"}
 
-::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));grid-gap: 1em;"}
-![Le Peyrou](images/20231105_0054.JPG){description="`r descrip_exif('images/20231105_0054.JPG')`" desc-position="left" group="montpellier"}
+![Image 4](images/4.jpg){description="Caption for Image 4"}
 
-![Arc de triomphe](images/20231105_0037.JPG){description="`r descrip_exif('images/20231105_0037.JPG')` "desc-position="left" group="montpellier"}
+![Image 5](images/5.jpg){description="Caption for Image 5"}
 
-![Les Arceaux](images/20231105_0069.JPG){description="`r descrip_exif('images/20231105_0069.JPG')` "desc-position="left" group="montpellier"}
+![Image 6](images/6.jpg){description="Caption for Image 6"}
+
+![Image 7](images/7.jpg){description="Caption for Image 7"}
+
+![Image 8](images/8.jpg){description="Caption for Image 8"}
+
+![Image 9](images/9.jpg){description="Caption for Image 9"}
+
+![Image 10](images/10.jpg){description="Caption for Image 10"}
+
+![Image 11](images/11.jpg){description="Caption for Image 11"}
 :::
-
-
-
