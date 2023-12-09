@@ -1,0 +1,32 @@
+I"`<p>A workflow from the browser if good for getting started (since you do not need to install additional software) and for making small contributions, but is definitely limited. Once you feel comfortable here, you can move to a different setup.</p>
+
+<p>Here’s an example of editing content on an existing page.</p>
+
+<h2 id="edit-content-on-an-existing-page">Edit content on an existing page</h2>
+
+<p>Let’s change the date on the home page of this website.</p>
+
+<p>In your repository, navigate to <code class="language-plaintext highlighter-rouge">index.md</code>. Then, click the pencil icon in the top right to edit directly.</p>
+
+<p><img src="images/github-edit-index.png" alt="" />{fig-align=”center” width=”95%”}</p>
+
+<p>We are now in the “Edit file” tab of the editor, where we can make modifications. Let’s change the date to today’s date. Click the “Preview” tab to see your changes. You can even check the “Show diff” box on the right side to see the changes you’ve made.</p>
+
+<p><img src="images/github-preview-show-diff.png" alt="" />{fig-align=”center” width=”95%”}</p>
+
+<p>While you’re here, see if there are additional changes to the text you’d like to make. Maybe changing the title or author at the top, or for the main text on the home page of the website.</p>
+
+<p>Our <code class="language-plaintext highlighter-rouge">index.md</code> file is written in Markdown, which enables you to make simple text formatting. As you go back and forth from “Edit file” to “Preview”, notice the patterns of how the Markdown text looks when it is as source (“Edit file”) and when it is formatted (“Preview”). For example, in Markdown, you can make text as a header with <code class="language-plaintext highlighter-rouge">#</code> symbols, bold or italic with <code class="language-plaintext highlighter-rouge">*</code> symbols, and hyperlinks with <code class="language-plaintext highlighter-rouge">[]()</code>. Notice that spacing is important: for example, there are carriage returns (when you hit the “return” key) before any bullet points. You can learn the short list of Markdown rules here: <a href="https://quarto.org/docs/authoring/markdown-basics.html">https://quarto.org/docs/authoring/markdown-basics</a>.</p>
+
+<h2 id="commit-and-publish">Commit and publish</h2>
+
+<p>Commit your changes by scrolling to the bottom of the page and writing a commit message - a note to yourself and others about what changes you made. Write your commit message and then click the green “Commit changes” button.</p>
+
+<p><img src="images/github-commit.png" alt="" />{fig-align=”center”}</p>
+
+<p>Now, click back to the main page of your GitHub repository. You should see the orange dot <a href="../explore.qmd#confirm">confirming your website is published</a>. You’ll have to wait for the GitHub Action to tell quarto to build your site for you to see the update, but it will be there!</p>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>While awesome that we can edit using GitHub directly from the browser, there are obvious limitations. One is that to see your edits show up in your book, you have to publish using the GitHub Action. This is slow. Another limitation is that we can only work on one file at a time and commit them each separately, which also is slow. Using additional software can make things much better, as we explore in subsequent chapters.</p>
+:ET

@@ -1,0 +1,259 @@
+I"F<p>You can interact with Quarto through JupyterLab or JupyterHub. Your Jupyter setup will involve <code class="language-plaintext highlighter-rouge">.ipynb</code> notebooks and the command line. <a href="https://quarto.org/docs/get-started/hello/jupyter.html">Quarto’s JupyterLab tutorials</a> has great instructions on getting started with JupyterLab, including computations and authoring.</p>
+
+<p>Here we will demonstrate how to work with this Quarto tutorial site in JupyterHub and add a Jupyter Notebook (<code class="language-plaintext highlighter-rouge">.ipynb</code> file). This example uses the NASA-Openscapes JupyterHub that already has all python environments as well as Quarto installed.</p>
+
+<h2 id="setup">Setup</h2>
+
+<h3 id="jupyterhub">JupyterHub</h3>
+
+<p>Our JupyterHub is already setup with python environments as well as Quarto (through <a href="https://github.com/nasa-openscapes/corn">nasa-openscapes/corn</a>), so there is no further installation required.</p>
+
+<h3 id="clone-your-repo">Clone your repo</h3>
+
+<p>You’ll start by cloning your repository into JupyterHub. Do this by opening a terminal (File &gt; New &gt; Terminal). In the Terminal, <code class="language-plaintext highlighter-rouge">git clone</code> your repository and <code class="language-plaintext highlighter-rouge">cd</code> into it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/openscapes/quarto-website-tutorial
+<span class="nb">cd </span>quarto-website-tutorial
+</code></pre></div></div>
+
+<h3 id="install-quarto">Install Quarto</h3>
+
+<p>Not needed - Quarto is already installed on the NASA-Openscapes JupyterHub! But to install elsewhere you would do so from <a href="https://quarto.org/docs/get-started/">https://quarto.org/docs/get-started/</a>.</p>
+
+<p>Quarto is a Command Line Interface (CLI), like git. Once download is complete, follow the installation prompts on your computer like you do for other software. You won’t see an application to click on when it is installed.</p>
+
+<p><em>Note for Mac users: If you do not have administrative privileges, please select “Install for me only” during the Destination Selection installation step (you will first click on “Change Install Location” at the Installation Type step).</em></p>
+
+<p>You can check to confirm that Quarto is installed properly from the command line:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>quarto check <span class="nb">install</span>
+</code></pre></div></div>
+
+<p>::: {.callout-note collapse=”true”}</p>
+<h2 id="additional-checks">Additional checks</h2>
+
+<p>You can also run:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">quarto check knitr</code> to locate R, verify we have the rmarkdown package, and do a basic render</li>
+  <li><code class="language-plaintext highlighter-rouge">quarto check jupyter</code> to locate Python, verify we have Jupyter, and do a basic render</li>
+  <li><code class="language-plaintext highlighter-rouge">quarto check</code> to run all of these checks together
+:::</li>
+</ul>
+
+<p>::: {.callout-tip collapse=”true”}</p>
+<h2 id="historical-aside-install-quarto-in-a-docker-container">Historical aside: Install Quarto in a docker container</h2>
+
+<p>In Summer 2021 some NASA Mentors trying to install quarto locally was not an option, but they were able to install it inside a container using the following <code class="language-plaintext highlighter-rouge">Dockerfile</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#| fold: true</span>
+<span class="c">#| summary: "Show the Dockerfile"</span>
+
+<span class="c">##############################</span>
+<span class="c"># This Dockerfile installs quarto and then runs quarto serve against the</span>
+<span class="c"># internal /home/quarto/to_serve.</span>
+<span class="c">#</span>
+<span class="c"># BUILD</span>
+<span class="c"># -----</span>
+<span class="c"># To build this container, run</span>
+<span class="c">#</span>
+<span class="c">#     docker build -t quarto_serve .</span>
+<span class="c">#</span>
+<span class="c"># Add the --no-cache option to force docker to build fresh and get the most</span>
+<span class="c"># recent version of quarto.</span>
+<span class="c">#</span>
+<span class="c">#</span>
+<span class="c"># RUN</span>
+<span class="c"># ---</span>
+<span class="c"># 1. Find the directory you want quarto to serve. Let's call this /PATH/TO/earthdata-cloud-cookbook.</span>
+<span class="c"># 2. Run docker:</span>
+<span class="c">#</span>
+<span class="c">#     docker run --rm -it -p 4848:4848 -v /PATH/TO/earthdata-cloud-cookbook:/home/quarto/to_serve quarto_serve</span>
+<span class="c">#</span>
+<span class="c"># 3. Open your browser and go to http://127.0.0.1:4848/</span>
+<span class="c">#</span>
+<span class="c">##############################</span>
+
+FROM ubuntu:hirsute
+
+<span class="c">######</span>
+<span class="c"># Install some command line tools we'll need</span>
+<span class="c">######</span>
+RUN apt-get update
+RUN apt-get <span class="nt">-y</span> <span class="nb">install </span>wget
+RUN apt-get <span class="nt">-y</span> <span class="nb">install </span>gdebi-core
+RUN apt-get <span class="nt">-y</span> <span class="nb">install </span>git
+
+
+<span class="c">######</span>
+<span class="c"># Install quarto (https://quarto.org/)</span>
+<span class="c">######</span>
+
+<span class="c"># This is a quick and dirty way of getting the newest version number from</span>
+<span class="c"># https://github.com/quarto-dev/quarto-cli/releases/latest. What's happening is</span>
+<span class="c"># we're pulling the version number out of the redirect URL. This will end up</span>
+<span class="c"># with QVER set to something like 0.2.11.</span>
+RUN <span class="nv">QVER</span><span class="o">=</span><span class="sb">`</span>wget <span class="nt">--max-redirect</span> 0 https://github.com/quarto-dev/quarto-cli/releases/latest 2&gt;&amp;1 | <span class="nb">grep</span> <span class="s2">"Location"</span> | <span class="nb">sed</span> <span class="s1">'s/L.*tag\/v//'</span> | <span class="nb">sed</span> <span class="s1">'s/ .*//'</span><span class="sb">`</span> <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> wget <span class="nt">-O</span> quarto.deb <span class="s2">"https://github.com/quarto-dev/quarto-cli/releases/download/v</span><span class="nv">$QVER</span><span class="s2">/quarto-</span><span class="nv">$QVER</span><span class="s2">-amd64.deb"</span>
+RUN gdebi <span class="nt">-n</span> quarto.deb
+
+<span class="c"># Run this to make sure quarto installed correctly</span>
+RUN quarto check <span class="nb">install</span>
+
+
+<span class="c">######</span>
+<span class="c"># Create a non-root user called quarto</span>
+<span class="c">######</span>
+RUN useradd <span class="nt">-ms</span> /bin/bash quarto
+USER quarto
+RUN <span class="nb">mkdir</span> /home/quarto/to_serve
+WORKDIR /home/quarto/to_serve
+
+
+<span class="c">######</span>
+<span class="c"># Start quarto serve</span>
+<span class="c">######</span>
+
+CMD quarto serve <span class="nt">--no-browse</span> <span class="nt">--host</span> 0.0.0.0 <span class="nt">--port</span> 4848
+</code></pre></div></div>
+
+<p>:::</p>
+
+<h2 id="quarto-preview">Quarto preview</h2>
+
+<p>Let’s start off by previewing our quarto site locally. In Terminal, type <code class="language-plaintext highlighter-rouge">quarto preview</code>, which will provide a URL with a preview of our site!</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>quarto preview
+<span class="c"># Preparing to preview</span>
+<span class="c"># Watching files for changes</span>
+<span class="c"># Browse at https://openscapes.2i2c.cloud/user/jules32/proxy/4593/</span>
+</code></pre></div></div>
+
+<p>Copy this URL into another browser window; and arrange them so you can see them both. I make a bit more space in Jupyter by collapsing the left file menu by clicking on the file icon at the top of the left sidebar.</p>
+
+<p><img src="images/jupyter-side-by-side.png" alt="" />{fig-align=”center”}</p>
+
+<h3 id="make-a-small-change-and-preview-it">Make a small change and preview it</h3>
+
+<p>Now we’ll be able to see live changes in the preview as we edit in our <code class="language-plaintext highlighter-rouge">.md</code> files. Let’s try it: Change the date in <code class="language-plaintext highlighter-rouge">index.md</code> by opening it from the file directory. Change to today’s date, and save. Your preview window will refresh automatically! If it does not, you can also refresh the page manually. The refreshed previewed site will now display your changes!</p>
+
+<h2 id="create-a-new-ipynb-page">Create a new <code class="language-plaintext highlighter-rouge">.ipynb</code> page</h2>
+
+<p>Let’s add a new page to our site. Instead of an <code class="language-plaintext highlighter-rouge">.md</code> file like the others, let’s add a <code class="language-plaintext highlighter-rouge">.ipynb</code> file.</p>
+
+<p>File &gt; New &gt; Notebook. Accept the default kernel by clicking Select.</p>
+
+<h3 id="first-chunk-raw-yaml">First chunk: raw yaml</h3>
+
+<p>By default, this Notebook will give us a first chunk that is code. Let’s change it to raw so that we can write our yaml at the top.</p>
+
+<p><img src="images/jupyter-raw-chunk.png" alt="" />{fig-align=”center”}</p>
+
+<p>In our Raw code chunk, let’s write the title of this document. We need three dashes <code class="language-plaintext highlighter-rouge">---</code> on separate lines preceding and following the <code class="language-plaintext highlighter-rouge">title:</code>, which you can name as you’d like.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span>
+title: Python Example
+<span class="nt">---</span>
+</code></pre></div></div>
+
+<h3 id="second-chunk-markdown">Second chunk: Markdown</h3>
+
+<p>Let’s add a new chunk that is Markdown so we can write some description of what this page will be.</p>
+
+<p>Click the <code class="language-plaintext highlighter-rouge">+</code> symbol at the top of the document, and this will add a new chunk, which by default again is a Code chunk. Change it to a Markdown Chunk following the steps we did above when switching to Raw.</p>
+
+<p>Here, write a little bit of text in Markdown. Since your title is effectively a level-1 header, avoid using level-1 headers in the rest of your document. Here is some example text I wrote:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">## Introduction</span>
+
+This example has some Python code that will be a part of our Quarto site.
+</code></pre></div></div>
+
+<h3 id="third-chunk-code">Third chunk: Code</h3>
+
+<p>Now let’s create a new chunk with the default Code setting.</p>
+
+<p>Paste the following code (or write some of your own to test):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+</span><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span>
+  <span class="n">subplot_kw</span> <span class="o">=</span> <span class="p">{</span><span class="s">'projection'</span><span class="p">:</span> <span class="s">'polar'</span><span class="p">}</span> 
+<span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="nf">set_rticks</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Now, go ahead and execute this code chunk like you normally would, by clicking the cursor in a code block and clicking the sideways “play” triangle to run the selected cells (and advance to the next cell). This code produces a plot.</p>
+
+<p>Note that the code runs as it normally would; the code options in the comments are just comments.</p>
+
+<h3 id="save-your-file">Save your file</h3>
+
+<p>Save your document - I’ll call mine <code class="language-plaintext highlighter-rouge">python-example.ipynb</code> in the main repository.</p>
+
+<h2 id="update-_quartoyml">Update <code class="language-plaintext highlighter-rouge">_quarto.yml</code></h2>
+
+<p>Now we’ll add <code class="language-plaintext highlighter-rouge">python-example.ipynb</code> to our <code class="language-plaintext highlighter-rouge">_quarto.yml</code> file; this is where we register of all files to include in our site. Let’s add it after the section called “Basic Workflows”.</p>
+
+<p>Open <code class="language-plaintext highlighter-rouge">_quarto.yml</code> by clicking on it from the file directory.</p>
+
+<p>Scroll down to review the current contents in the <code class="language-plaintext highlighter-rouge">sidebar:</code> section. It’s there we see all the file arrangement that we see in the previewed site.</p>
+
+<p>Add <code class="language-plaintext highlighter-rouge">- python-example.ipynb</code> to line 46, making sure that your indentation aligns with the other pages.</p>
+
+<p><img src="images/jupyter-python-example.png" alt="" />{fig-align=”center”}</p>
+
+<p>You’ll see that our new page shows up in our Preview, and the code is executed since we did that in the Jupyter Notebook itself. By default, Quarto will not execute code chunks since your computations will likely become more complex and you will want to control when they are executed (or “run”).</p>
+
+<p>Since Quarto is still previewing our website and the <code class="language-plaintext highlighter-rouge">python-example.ipynb</code>, the plot also displays in the notebook after the code is run and the file is saved, as shown below.</p>
+
+<p><img src="images/jupyter-execute-cell.png" alt="" />{fig-align=”center”}</p>
+
+<p>So, your normal workflow for creating and running code blocks in your Jupyter Notebook is the same one you’ll use as Quarto displays the preview.</p>
+
+<h2 id="quarto-render">Quarto render</h2>
+
+<p>So far we have used <strong>Quarto preview</strong> to view our website as we develop it. <strong>Quarto render</strong> will build the html elements of the website that we can see when we preview. Rendering will format the markdown text and code nicely as a website (or however is indicated in the <code class="language-plaintext highlighter-rouge">_quarto.yml</code>).</p>
+
+<p>By default, Quarto render does not execute code in a Jupyter notebook. It will never run .ipynb files unless you tell it to.</p>
+
+<h3 id="render-whole-notebook">Render whole notebook</h3>
+
+<p>If you would like it to specifically execute code in a Jupyter notebook, you can do so in Terminal.</p>
+
+<p>Our Terminal is still busy previewing our website, so let’s open a new Terminal.</p>
+
+<p>File &gt; New &gt; Terminal. Then type:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>quarto-website-tutorial
+quarto render python-example.ipynb <span class="nt">--execute</span>
+</code></pre></div></div>
+
+<h2 id="authoring-tips">Authoring tips</h2>
+
+<p><a href="https://quarto.org">Quarto.org</a> has details about authoring, including specific instructions about authoring in Jupyter: <a href="https://quarto.org/docs/reference/cells/cells-jupyter.html">quarto.org/docs/reference/cells/cells-jupyter</a>.</p>
+
+<h2 id="commit-and-push">Commit and push!</h2>
+
+<p>Committing and pushing will make the changes you see locally live on your website (using the <a href="/explore.qmd#setup-github-action">GitHub Action we set up earlier</a>).</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<h3 id="my-changes-dont-show-up-in-preview">My changes don’t show up in preview</h3>
+
+<p>Make sure you’ve saved your file! There might be a slight delay depending on your JupyterHub/Lab setup.</p>
+
+<h3 id="quarto-render-hangs--does-not-complete">Quarto render hangs / does not complete</h3>
+
+<p>Check the specific notebook, are there any `—` throughout to denote line breaks rather than yaml? They might be causing the issue; consider deleting those.</p>
+
+<p>Also check how long the first raw cell is. Are there level-1 headers (<code class="language-plaintext highlighter-rouge">#</code>)? Try removing them.</p>
+
+:ET

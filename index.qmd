@@ -1,7 +1,6 @@
 ---
 title: "Making shareable documents with Quarto"
-subtitle: "Create open-source tutorials, onboarding docs, and much more"
----
+subtitle: "Aishwarya's version"---
 
 ## Welcome {#welcome}
 
