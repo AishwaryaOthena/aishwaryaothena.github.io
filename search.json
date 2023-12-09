@@ -9,16 +9,16 @@
   {
     "objectID": "photos/photos.html",
     "href": "photos/photos.html",
-    "title": "Photos",
+    "title": "Aishwarya Othena",
     "section": "",
-    "text": "Le Peyrou\n\n\n\n\n\nArc de triomphe\n\n\n\n\n\nLes Arceaux"
+    "text": "title: “Art Gallery” title-block-banner: true page-layout: full freeze: false filters: - lightbox lightbox: auto echo: false"
   },
   {
-    "objectID": "photos/photos.html#tactile-art",
-    "href": "photos/photos.html#tactile-art",
-    "title": "Photos",
-    "section": "",
-    "text": "Le Peyrou\n\n\n\n\n\nArc de triomphe\n\n\n\n\n\nLes Arceaux"
+    "objectID": "photos/photos.html#tactile-art-gallery",
+    "href": "photos/photos.html#tactile-art-gallery",
+    "title": "Aishwarya Othena",
+    "section": "Tactile Art Gallery",
+    "text": "Tactile Art Gallery\n\n\n\n\nImage 1\n\n\n\n\n\nImage 2\n\n\n\n\n\nImage 3\n\n\n\n\n\nImage 4\n\n\n\n\n\nImage 5\n\n\n\n\n\nImage 6\n\n\n\n\n\nImage 7\n\n\n\n\n\nImage 8\n\n\n\n\n\nImage 9\n\n\n\n\n\nImage 10\n\n\n\n\n\nImage 11"
   },
   {
     "objectID": "content/cv.html",
