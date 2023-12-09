@@ -7,7 +7,7 @@ author:
 date: 05-18-2023
 categories: [Accessibility, Disability] # self-defined categories
 citation: 
-  url: https://aishwaryaothena.github.io/newwebsite/disability/2023-05-18-gaad/ 
+  url: https://aishwaryaothena.github.io/disability/2023-05-18-gaad/ 
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
 
