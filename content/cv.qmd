@@ -1,0 +1,126 @@
+---
+title: 💻✒️📄🌟
+description: O. Aishwarya's CV
+---
+
+# O. Aishwarya
+
+_Doctoral candidate at International Institute of Information Technology, Bangalore🇮🇳_ <br>
+
+[Email](mailto:O.Aishwarya@iiitb.ac.in) / [Website](https://aishwaryaothena.github.io//) / [LinkedIn](https://www.linkedin.com/in/AishwaryaOthena/) / [GitHub](https://github.com/AishwaryaOthena/)
+
+## 👩🏻‍🦯 Bio
+
+I am a research scholar affiliated with the Centre for Accessibility in the Global South, International Institute of Information Technology, Bangalore. I work at the intersection of disability studies, accessibility and assistive technology to analyse educational systems for children who are blind and visually impaired living in the Global South.
+
+## 👩🏼‍🎓 Research Interests
+
++ Disability studies and accessibility in the Global South
++ Inclusive education
++ Ethnography and action research
+
+## 🎓 Education
+
+**PhD in IT and Society** (currently pursuing)<br>
+At [Centre for Accessibility in the Global South](https://http://www.cagsiiitb.org), [International Institute of Information Technology](www.iiitb.ac.in), - Bangalore, India. _(2020 - present)_ <br>
+**Area of work:** Disability and Assistive Technology: Tactile Art Opportunities for Congenitally Blind Children in India
+
+**Master of Arts** in Development<br>
+[Azim Premji University](https://azimpremjiuniversity.edu.in) - Bangalore, India _(2017 - 2019) - CGPA 8.8_ <br>
+
+
+**Bachelor of Arts** in Economics<br>
+[Sacred Heart College, Mahatma Gandhi University](https://www.mgu.ac.in/) - Kerala, India _(2014 - 2017) - CGPA 9.8_
+
+## 👩🏼‍💻 Experience
+
+**Intern ** @ [Microsoft Research India](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/) _(Jan. 2021 - Jul. 2021)_
+
++ Analysed and documented the art-making practices of 10 visually impaired artists around the
+world.
++ Conducted studies to understand the semiotics of tactile art.
+
+<br><br>
+
+**Educational Coordinator ** @ [Vision Empower](http://visionempowertrust.org/) _(June 2019 - August 2020)_ 
+
++ Responsibilities included creating accessible STEM content, development of teacher training modules, , designing student engagements for
+visually impaired students in middle school using story-telling, games and technology.
++ Involved in the VICT project which aimed to inculcate computational thinking (CT) concepts in children with visual impairments through play. This included creation and validation of resources, weekly school visits for play sessions, observation and reporting, and creating the CT curriculum
+with the team.
++ Worked extensively on secondary research in order to generate key learning indicators of numeracy
+skills for students in Grades 1-4.
++ Involved in a research study on the attitudes and perceptions of teachers on introducing digital
+literacy through games.
++ Evaluated technologies such as TAG and HEXIS created at Vision Empower and IIITB for
+students with visual impairment.
++ Conducted a research pilot for online story telling as a pedagogical approach for children with
+visual impairment.
+
+<br><br>
+
+**Intern ** @ [Grassroots Research and Advocacy Movement](https://graam.org.in) _(May 2018- June 2018 )_
+
++ Worked on a research project titled A Study to Understand Employment Needs & Opportunities for Persons with Disabilities in Mysore and Gadag Districts of Karnataka  + Conducted primary data collection through personal interviews of various stakeholders, undertook research writing and documentation.
+
+**Intern ** @ [Centre for Development Studies, Trivandrum](https://www.cds.ac.in) _(May 2017- June 2017 )_
+
++ Prepared and presented report titled An Analysis of Mandatory Corporate Social Responsibility 
+in India: Trends, Prospects and Challenges in the Post-Mandate Period. 
+
+<br><br>
+
+## 👩🏼‍🎓 Fellowships and Scholarships
+
+ + [I Can Lead 2020](https://risingflame.org/project/i-can-lead-2020/) fellow: one of 12 women with disabilities selected for the fellowship by **Rising Flame**
++ Course on **Designing and Creating Assistive Technology Solutions,** 2021 - Scholarship  by **National Institute of Speech and Hearing, Trivandrum**
++ Course on **Methods and Statistics in Social Sciences** - Financed  by **Coursera**
++ Set of courses on **document accessibility**  completed with  scholarship for persons with disabilities by **Deque University**
+
+## ✍🏼🎤 Publications and Talks
+
+### Conference Papers
+
++ 2022. Performing Qualitative Data Analysis as a Blind Researcher: Challenges, Workarounds and Design Recommendations. In The 24th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’22) [DOI](https://doi.org/10.1145/3517428.3551356)
++ 2021. Teachers’ Perceptions around Digital Games for Children in Low-resource Schools for the Blind. With Gesu India, Vidhya Y, Nirmalendu Diwakar, Mohit Jain, Aditya Vashistha, and Manohar Swaminathan. In CHI Conference on Human Factors in Computing Systems (CHI ’21) [DOI](https://doi.org/10.1145/3411764.3445194)
+
+### Talks
+
++ 2023. Invited talk at the Workshop on Data Analysis for People with Visual Impairments, organized by Azim Premji University
++ 2022.  State of the Art in Assistive Technology for People with Visual Disabilities, invited guest lecture at the Workshop on Assistive Technology for Rehabilitation Professionals, Organized by the Rehabilitation Council of India. .
++  2022. Tactile Art: from Hobby to Research, at the Workshop on Tactile Interactivity, Organized by the Disability Innovation Hub and Center for Accessibility in the Global South at IIITB.
++ 2021. Hands-on and Hand-in-hand: Building Virtual Makerspaces that are Accessible to people with Visual Disabilities. in. Workshop on Accessible AR and VR Systems. in CHI2021.
++ 2021. Finding Community. I Can Lead Talk for Rising flame. [Watch on Youtube](https://www.youtube.com/watch?v=WCtEMYSyWxk)
+
+### Poster Presentations
+
++ 2023. A participatory Design Approach for the Global South: Lessons from Designing a Tool for the Comprehension of Tactile Graphics for Children with Visual Impairments in India. With Amit Prakash and Supriya Dey. in Empower, 2023. 
++ 2019. Play to Learn and Learn to Play: Designing Card games for Inculcating Numeracy Skills for children with Visual Impairments. With Amit Prakash, Supriya Dey, Manohar Swaminathan, Gesu India, and Jyoti Bhisht.in Empower, 2019. 
+
+
+## 👩🏼‍🎓 Skills
+
++ Qualitative research
+  + Ethnography
+  + Action research
+  + Systems thinking
++ Quantitative research
+  + Data analysis using R and python
++ Accessibility testing
+  + Document accessibility testing for Word, PDF, Excel, PowerPoint, and Epub files
++ Content creation environments
+  + Markdown, R Markdown, Latex, Microsoft Office 
+
+## 💬 Languages
+
+🌏 **English **
+
+🇮🇳 **Malayalam** (native language)
+
+🇮🇳 **Hindi**
+
+🇮🇳 **Kannada** (basic speaking proficiency)
+
+🇫🇷 **French** (A2 Proficiency)
+
+
