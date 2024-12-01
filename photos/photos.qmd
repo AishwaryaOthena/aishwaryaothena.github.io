@@ -11,9 +11,10 @@ echo: false
 ## Tactile Art Gallery
 
 ::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); grid-gap: 1em;"}
+
 ![Image 1](images/1.jpg){description="Good intentions, September 2020"}
 
-![Image 2](images/2.jpg){description="Light and Dark, October 2020"}
+![Image 2](images/2.JPG){description="Light and Dark, October 2020"}
 
 ![Image 3](images/3.jpg){description="Caption for picture 3"}
 
