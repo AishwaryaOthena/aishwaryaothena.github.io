@@ -14,7 +14,7 @@ echo: false
 
 ![Good Intentions, September 2020](images/1.jpg){description="Good Intentions, September 2020" alt="An abstract tactile artwork titled 'Good Intentions' created in September 2020"}
 
-![Light and Dark, October 2020](images/2.jpg){description="Light and Dark, October 2020" alt="A contrasting tactile artwork titled 'Light and Dark' created in October 2020"}
+![Light and Dark, October 2020](images/2.JPG){description="Light and Dark, October 2020" alt="A contrasting tactile artwork titled 'Light and Dark' created in October 2020"}
 
 ![Caption for Image 3](images/3.jpg){description="Caption for Image 3" alt="Description of the artwork for Image 3"}
 
