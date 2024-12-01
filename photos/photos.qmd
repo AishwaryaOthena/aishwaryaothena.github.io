@@ -33,4 +33,5 @@ echo: false
 
 ![Caption for Image 10](images/10.jpg){description="Caption for Image 10" alt="Description of the artwork for Image 10"}
 
+
 :::
