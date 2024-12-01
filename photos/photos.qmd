@@ -10,28 +10,26 @@ echo: false
 
 ## Tactile Art Gallery
 
-::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); grid-gap: 1em;"}
+::: {style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; padding: 1em;"}
 
-![Image 1](images/1.jpg){description="Good intentions, September 2020"}
+![Good Intentions, September 2020](images/1.jpg){description="Good Intentions, September 2020" alt="An abstract tactile artwork titled 'Good Intentions' created in September 2020"}
 
-![Image 2](images/2.JPG){description="Light and Dark, October 2020"}
+![Light and Dark, October 2020](images/2.jpg){description="Light and Dark, October 2020" alt="A contrasting tactile artwork titled 'Light and Dark' created in October 2020"}
 
-![Image 3](images/3.jpg){description="Caption for picture 3"}
+![Caption for Image 3](images/3.jpg){description="Caption for Image 3" alt="Description of the artwork for Image 3"}
 
-![Image 4](images/4.jpg){description="Caption for Image 4"}
+![Caption for Image 4](images/4.jpg){description="Caption for Image 4" alt="Description of the artwork for Image 4"}
 
-![Image 5](images/5.jpg){description="Caption for Image 5"}
+![Caption for Image 5](images/5.jpg){description="Caption for Image 5" alt="Description of the artwork for Image 5"}
 
-![Image 6](images/6.jpg){description="Caption for Image 6"}
+![Caption for Image 6](images/6.jpg){description="Caption for Image 6" alt="Description of the artwork for Image 6"}
 
-![Image 7](images/7.jpg){description="Caption for Image 7"}
+![Caption for Image 7](images/7.jpg){description="Caption for Image 7" alt="Description of the artwork for Image 7"}
 
-![Image 8](images/8.jpg){description="Caption for Image 8"}
+![Caption for Image 8](images/8.jpg){description="Caption for Image 8" alt="Description of the artwork for Image 8"}
 
-![Image 9](images/9.jpg){description="Caption for Image 9"}
+![Caption for Image 9](images/9.jpg){description="Caption for Image 9" alt="Description of the artwork for Image 9"}
 
-![Image 10](images/10.jpg){description="Caption for Image 10"}
-
-
+![Caption for Image 10](images/10.jpg){description="Caption for Image 10" alt="Description of the artwork for Image 10"}
 
 :::
