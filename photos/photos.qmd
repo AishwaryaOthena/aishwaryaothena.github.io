@@ -12,6 +12,7 @@ echo: false
 
 ::: {style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; padding: 1em;"}
 
+
 ![Good Intentions, September 2020](images/1.jpg){description="Good Intentions, September 2020" alt="An abstract tactile artwork titled 'Good Intentions' created in September 2020"}
 
 ![Light and Dark, October 2020](images/2.JPG){description="Light and Dark, October 2020" alt="A contrasting tactile artwork titled 'Light and Dark' created in October 2020"}
