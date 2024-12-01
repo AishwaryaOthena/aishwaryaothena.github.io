@@ -2,9 +2,9 @@
   {
     "objectID": "photos/photos.html",
     "href": "photos/photos.html",
-    "title": "Aishwarya Othena",
+    "title": "Art Gallery",
     "section": "",
-    "text": "title: “Art Gallery” title-block-banner: true page-layout: full freeze: false",
+    "text": "::: {style=“display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; padding: 1em;”}\n\n\n\nGood Intentions, September 2020\n\n\n\n\n\nLight and Dark, October 2020\n\n\n\n\n\nCaption for Image 3\n\n\n\n\n\nCaption for Image 4\n\n\n\n\n\nCaption for Image 5\n\n\n\n\n\nCaption for Image 6\n\n\n\n\n\nCaption for Image 7\n\n\n\n\n\nCaption for Image 8\n\n\n\n\n\nCaption for Image 9\n\n\n\n\n\nCaption for Image 10\n\n\n:::\n\n\n\n\nGood Intentions, September 2020\n\n\nLight and Dark, October 2020\n\n\nCaption for Image 3\n\n\nCaption for Image 4\n\n\nCaption for Image 5\n\n\nCaption for Image 6\n\n\nCaption for Image 7\n\n\nCaption for Image 8\n\n\nCaption for Image 9\n\n\nCaption for Image 10",
     "crumbs": [
       "Art Gallery"
     ]
@@ -12,9 +12,9 @@
   {
     "objectID": "photos/photos.html#tactile-art-gallery",
     "href": "photos/photos.html#tactile-art-gallery",
-    "title": "Aishwarya Othena",
-    "section": "Tactile Art Gallery",
-    "text": "Tactile Art Gallery\n\n\n\n&lt;img src=\"images/1.jpg\" alt=\"An abstract tactile artwork titled 'Good Intentions' created in September 2020\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Good Intentions, September 2020&lt;/p&gt;\n\n\n&lt;img src=\"images/2.jpg\" alt=\"A contrasting tactile artwork titled 'Light and Dark' created in October 2020\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Light and Dark, October 2020&lt;/p&gt;\n\n\n&lt;img src=\"images/3.jpg\" alt=\"Description of the artwork for Image 3\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Caption for Image 3&lt;/p&gt;",
+    "title": "Art Gallery",
+    "section": "",
+    "text": "::: {style=“display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; padding: 1em;”}\n\n\n\nGood Intentions, September 2020\n\n\n\n\n\nLight and Dark, October 2020\n\n\n\n\n\nCaption for Image 3\n\n\n\n\n\nCaption for Image 4\n\n\n\n\n\nCaption for Image 5\n\n\n\n\n\nCaption for Image 6\n\n\n\n\n\nCaption for Image 7\n\n\n\n\n\nCaption for Image 8\n\n\n\n\n\nCaption for Image 9\n\n\n\n\n\nCaption for Image 10\n\n\n:::\n\n\n\n\nGood Intentions, September 2020\n\n\nLight and Dark, October 2020\n\n\nCaption for Image 3\n\n\nCaption for Image 4\n\n\nCaption for Image 5\n\n\nCaption for Image 6\n\n\nCaption for Image 7\n\n\nCaption for Image 8\n\n\nCaption for Image 9\n\n\nCaption for Image 10",
     "crumbs": [
       "Art Gallery"
     ]
