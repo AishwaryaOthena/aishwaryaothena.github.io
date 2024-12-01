@@ -2,9 +2,9 @@
   {
     "objectID": "photos/photos.html",
     "href": "photos/photos.html",
-    "title": "Art Gallery",
+    "title": "Aishwarya Othena",
     "section": "",
-    "text": "&lt;img src=\"images/1.jpg\" alt=\"An abstract tactile artwork titled 'Good Intentions' created in September 2020\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Good Intentions, September 2020&lt;/p&gt;\n\n\n&lt;img src=\"images/2.JPG\" alt=\"A contrasting tactile artwork titled 'Light and Dark' created in October 2020\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Light and Dark, October 2020&lt;/p&gt;\n\n\n&lt;img src=\"images/3.jpg\" alt=\"Description of the artwork for Image 3\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Caption for Image 3&lt;/p&gt;\n\n\n&lt;img src=\"images/4.jpg\" alt=\"Description of the artwork for Image 4\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Caption for Image 4&lt;/p&gt;",
+    "text": "title: “Art Gallery” title-block-banner: true page-layout: full freeze: false",
     "crumbs": [
       "Art Gallery"
     ]
@@ -12,9 +12,9 @@
   {
     "objectID": "photos/photos.html#tactile-art-gallery",
     "href": "photos/photos.html#tactile-art-gallery",
-    "title": "Art Gallery",
-    "section": "",
-    "text": "&lt;img src=\"images/1.jpg\" alt=\"An abstract tactile artwork titled 'Good Intentions' created in September 2020\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Good Intentions, September 2020&lt;/p&gt;\n\n\n&lt;img src=\"images/2.JPG\" alt=\"A contrasting tactile artwork titled 'Light and Dark' created in October 2020\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Light and Dark, October 2020&lt;/p&gt;\n\n\n&lt;img src=\"images/3.jpg\" alt=\"Description of the artwork for Image 3\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Caption for Image 3&lt;/p&gt;\n\n\n&lt;img src=\"images/4.jpg\" alt=\"Description of the artwork for Image 4\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Caption for Image 4&lt;/p&gt;",
+    "title": "Aishwarya Othena",
+    "section": "Tactile Art Gallery",
+    "text": "Tactile Art Gallery\n\n\n\n&lt;img src=\"images/1.jpg\" alt=\"An abstract tactile artwork titled 'Good Intentions' created in September 2020\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Good Intentions, September 2020&lt;/p&gt;\n\n\n&lt;img src=\"images/2.jpg\" alt=\"A contrasting tactile artwork titled 'Light and Dark' created in October 2020\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Light and Dark, October 2020&lt;/p&gt;\n\n\n&lt;img src=\"images/3.jpg\" alt=\"Description of the artwork for Image 3\" style=\"width: 100%; border-radius: 8px;\"&gt;\n&lt;p style=\"text-align: center; margin-top: 0.5em;\"&gt;Caption for Image 3&lt;/p&gt;",
     "crumbs": [
       "Art Gallery"
     ]
